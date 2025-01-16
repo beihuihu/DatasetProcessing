@@ -10,11 +10,15 @@ start = time.time()
 
 arcpy.CheckOutExtension("3D") # Obtain a license for the ArcGIS 3D Analyst extension
 arcpy.env.overwriteOutput = True
-base_dir = 'J:\lakemapping\postprocess\补充'
+# base_dir = 'J:\lakemapping\postprocess\补充'
+base_dir=r'D:\lakemapping\4_prediction\model0130\sampleV8\test_buffer_0_02degree'
+# predicted_image_dir =r'J:\lakemapping\postprocess\补充\tif'
+# tif2shp = r'J:\lakemapping\postprocess\补充\tif2shp'
+# tif2shp_dn1_path = r'J:\lakemapping\postprocess\补充\tif2shp_dn1'
 
-predicted_image_dir =r'J:\lakemapping\postprocess\补充\tif'
-tif2shp = r'J:\lakemapping\postprocess\补充\tif2shp'
-tif2shp_dn1_path = r'J:\lakemapping\postprocess\补充\tif2shp_dn1'
+predicted_image_dir =base_dir+r'\result\iew25'
+tif2shp =predicted_image_dir+r'\tif2shp'
+tif2shp_dn1_path = predicted_image_dir+r'\tif2shp_dn1'
 if not os.path.exists(tif2shp):
     os.makedirs(tif2shp)
 
